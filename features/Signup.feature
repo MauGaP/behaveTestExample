@@ -4,7 +4,7 @@ Feature: Sign up
   Scenario Outline: Register a new user
     Given the chrome browser is located on demoblaze.com
     When the user registers his <user> and <password> credentials on the sign up modal
-    Then the page displays an alert modal with a successful confirmation message
+    Then the page displays an alert with a successful confirmation message
     Examples:
     # In a more robust system or one that I have access to the user registration database, I would create an script or
     # method to delete stored users. Since I can't do this here, please change the name of the user in this example
@@ -16,7 +16,7 @@ Feature: Sign up
   Scenario Outline: Register a user already registered
     Given the chrome browser is located on demoblaze.com
     When the user registers his <user> and <password> credentials on the sign up modal
-    Then the page displays an alert modal with an unsuccessful message
+    Then the page displays an alert with an unsuccessful signup message
     Examples:
       | user           | password |
       | registeredUser | 12345    |
