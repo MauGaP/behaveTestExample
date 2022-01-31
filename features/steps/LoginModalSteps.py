@@ -20,6 +20,7 @@ def open_sign_up_modal_and_enter_credentials(context, user, password):
 
 @then('the page displays the "Welcome {username}" and the log out button on the header')
 def validate_logged_in_user(context, username):
+    #TODO find a way to replace this sleep
     time.sleep(2)
     user_message = find_element_by_id(context, user_welcome_message_id)
     logout_button = find_element_by_id(context, logout_button_id)
