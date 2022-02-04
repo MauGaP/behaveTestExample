@@ -1,6 +1,6 @@
-# region categories
-from CommonConstants import phones_list, laptops_list, monitors_list, default_list
+from CommonConstants import phones_names_list, laptops_names_list, monitors_names_list, default_names_list
 
+# region categories
 categories_css_selector = '#cat.list-group-item'
 phones_css_selector = '.list-group .list-group-item:nth-child(2)'
 laptops_css_selector = '.list-group .list-group-item:nth-child(3)'
@@ -23,16 +23,16 @@ def category_selection(category):
 
 
 # region product list
-def product_names_list(category):
+def filter_product_names_list(category):
     match category.lower():
         case 'phones':
-            return phones_list
+            return phones_names_list
         case 'laptops':
-            return laptops_list
+            return laptops_names_list
         case 'monitors':
-            return monitors_list
+            return monitors_names_list
         case 'default':
-            return default_list
+            return default_names_list
         case _:
             print('not a valid category')
 

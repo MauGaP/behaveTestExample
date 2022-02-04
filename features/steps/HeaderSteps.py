@@ -5,7 +5,7 @@ from HeaderPage import logout_button_id, login_button_id, sign_up_button_id
 from Utils import click_element_by_id, locate_element_by_id
 
 
-@given('the {browser} browser is located on demoblaze.com')
+@given('the user opens the page demoblaze.com in {browser} browser.')
 def navigate_to_home_page(context, browser):
     launch_browser(context, browser)
     context.driver.maximize_window()

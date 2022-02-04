@@ -2,24 +2,24 @@ Feature: Product store
 
   @smoke @product_store
   Scenario Outline: Login and apply a filter.
-    Given the <browser> browser is located on demoblaze.com
+    Given the user opens the page demoblaze.com in chrome browser.
     And an existing user is already logged in
     When the user filters <category>
     Then the page only displays <category> items
     Examples:
-      | browser | category |
-      | chrome  | monitors |
-      | chrome  | phones   |
-      | chrome  | laptops  |
-      | firefox | default |
+      | category |
+      | monitors |
+      | phones   |
+      | laptops  |
+      | default  |
 
   @bvt @smoke @product_store
   Scenario Outline: Login, apply a filter and open the first product
-    Given the <browser> browser is located on demoblaze.com
+    Given the user opens the page demoblaze.com in chrome browser.
     And an existing user is already logged in
     When the user filters <category>
-    And selects the first product in <category>
+    And selects the first product displayed
     Then the page displays all the information correctly for the first item in <category>
     Examples:
-      | browser | category |
-      | chrome  | phones   |
+      | category |
+      | phones   |

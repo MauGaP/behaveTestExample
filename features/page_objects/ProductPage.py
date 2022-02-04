@@ -5,6 +5,7 @@ from CommonConstants import first_phone_dictionary, first_laptop_dictionary, fir
 product_name_css_selector = '#tbodyid .name'
 product_price_css_selector = '#tbodyid .price-container'
 product_description_css_selector = '#more-information > p'
+add_to_cart_button_css_selector = '#tbodyid .btn-success'
 
 
 def get_first_product_information(category):
