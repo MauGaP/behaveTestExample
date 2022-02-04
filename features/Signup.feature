@@ -2,7 +2,7 @@ Feature: Sign up
 
   @smoke @signup
   Scenario Outline: Register a new user
-    Given the user opens the page demoblaze.com in chrome browser.
+    Given the user opens the page demoblaze.com in chrome browser
     When the user registers his <user> and <password> credentials on the sign up modal
     Then the page displays an alert with a successful confirmation message
     Examples:
@@ -14,7 +14,7 @@ Feature: Sign up
 
   @signup
   Scenario Outline: Register a user already registered
-    Given the user opens the page demoblaze.com in chrome browser.
+    Given the user opens the page demoblaze.com in chrome browser
     When the user registers his <user> and <password> credentials on the sign up modal
     Then the page displays an alert with an unsuccessful signup message
     Examples:

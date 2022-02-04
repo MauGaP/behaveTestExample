@@ -53,3 +53,22 @@ default_names_list = ['Samsung galaxy s6', 'Nokia lumia 1520', 'Nexus 6', 'Samsu
 demo_user = 'MauGaP'
 demo_password = '123456'
 # endregion valid user credentials
+
+
+# region valid purchase user data
+purchase_name = 'purchase_name'
+purchase_country = 'purchase_country'
+purchase_city = 'purchase_city'
+purchase_credit_card_number = 'purchase_credit_card_number'
+purchase_credit_card_month = 'purchase_credit_card_month'
+purchase_credit_card_year = 'purchase_credit_card_year'
+
+purchase_data_dictionary = {
+    purchase_name: 'cosme fulanito',
+    purchase_country: 'argentina',
+    purchase_city: 'cordoba',
+    purchase_credit_card_number: '1111 1111 1111 1111',
+    purchase_credit_card_month: '02',
+    purchase_credit_card_year: '25'
+}
+# end region valid purchase user data

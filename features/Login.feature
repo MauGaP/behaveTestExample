@@ -2,7 +2,7 @@ Feature: Log in
 
   @smoke @login
   Scenario Outline: Log in with valid credentials.
-    Given the user opens the page demoblaze.com in chrome browser.
+    Given the user opens the page demoblaze.com in chrome browser
     When the user enters his <username> and <password> credentials on the login modal
     Then the page displays the "Welcome <username>" and the log out button on the header
     Examples:
@@ -11,7 +11,7 @@ Feature: Log in
 
   @login
   Scenario Outline: Try to log in with invalid credentials.
-    Given the user opens the page demoblaze.com in chrome browser.
+    Given the user opens the page demoblaze.com in chrome browser
     When the user enters his <username> and <password> credentials on the login modal
     Then the page displays an alert with an unsuccessful login message
     Examples:
