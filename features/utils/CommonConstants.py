@@ -54,7 +54,6 @@ demo_user = 'MauGaP'
 demo_password = '123456'
 # endregion valid user credentials
 
-
 # region valid purchase user data
 purchase_name = 'purchase_name'
 purchase_country = 'purchase_country'
@@ -71,4 +70,4 @@ purchase_data_dictionary = {
     purchase_credit_card_month: '02',
     purchase_credit_card_year: '25'
 }
-# end region valid purchase user data
+# endregion valid purchase user data
