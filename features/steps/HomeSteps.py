@@ -4,18 +4,18 @@ from behave import when, then
 
 from HomePage import category_selection, product_item_class_name, filter_product_names_list, \
     first_product_displayed
-from Utils import click_element_by_css, locate_elements_by_class
+from Utils import click_element_by_css_selector, locate_elements_by_class
 
 
 @when('the user filters {category}')
 def user_filters_category(context, category):
     category_selector = category_selection(category)
-    click_element_by_css(context, category_selector)
+    click_element_by_css_selector(context, category_selector)
 
 
 @when('selects the first product displayed')
 def click_first_product_displayed(context):
-    click_element_by_css(context, first_product_displayed)
+    click_element_by_css_selector(context, first_product_displayed)
     # TODO find a way to replace this sleep
     time.sleep(2)
 

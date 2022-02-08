@@ -19,5 +19,5 @@ def user_tries_to_logout(context):
 
 @then('"login" and "sign up" buttons are displayed on the page')
 def login_and_signup_buttons_are_displayed(context):
-    locate_element_by_id(context, login_button_id).is_displayed()
-    locate_element_by_id(context, sign_up_button_id).is_displayed()
+    assert locate_element_by_id(context, login_button_id).is_displayed()
+    assert locate_element_by_id(context, sign_up_button_id).is_displayed()
