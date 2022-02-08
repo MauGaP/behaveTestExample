@@ -1,7 +1,4 @@
 from behave import when, then
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
 
 from CommonConstants import sign_up_successful_message, this_user_already_exists_message
 from HeaderPage import sign_up_button_id
@@ -19,11 +16,11 @@ def open_sign_up_modal_and_enter_credentials(context, username, password):
 
 @then("the page displays an alert with a successful confirmation message")
 # This method should include a "delete user" function as a cleanup after its execution. This is something that
-# I can't do since I have no access to any delete user method on the page
+# I can't do since I have no access to any delete user method on the page nor a backend/database connection
 def successful_confirmation_message(context):
-    validate_alert_message(context, sign_up_successful_message)
+    assert validate_alert_message(context, sign_up_successful_message)
 
 
 @then("the page displays an alert with an unsuccessful signup message")
 def unsuccessful_confirmation_message(context):
-    validate_alert_message(context, this_user_already_exists_message)
+    assert validate_alert_message(context, this_user_already_exists_message)

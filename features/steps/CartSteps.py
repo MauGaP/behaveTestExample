@@ -35,5 +35,5 @@ def validate_cart_is_empty(context):
     time.sleep(2)
     list_of_cart_products = locate_elements_by_css_selector(context, cart_products_css_selector)
 
-    # Empty lists are considered False in Python
+    # Empty lists are considered a False boolean in Python
     assert not list_of_cart_products

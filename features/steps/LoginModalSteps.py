@@ -36,4 +36,4 @@ def validate_logged_in_user(context, username):
 
 @then("the page displays an alert with an unsuccessful login message")
 def unsuccessful_confirmation_message(context):
-    validate_alert_message(context, user_does_not_exist_message)
+    assert validate_alert_message(context, user_does_not_exist_message)

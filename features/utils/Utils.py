@@ -46,7 +46,12 @@ def validate_alert_message(self, text_message):
     try:
         WebDriverWait(self.driver, 3).until(expected_conditions.alert_is_present())
         alert = self.driver.switch_to.alert
-        assert text_message in alert.text
-        alert.accept()
+        if text_message == alert.text:
+            alert.accept()
+            return True
+        else:
+            alert.accept()
+            return False
+
     except TimeoutException:
         print("no alert")
