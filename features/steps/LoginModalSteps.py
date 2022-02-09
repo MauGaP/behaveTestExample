@@ -10,18 +10,15 @@ from Utils import click_element_by_id, send_keys_by_id, click_element_by_css_sel
 
 
 @given('an existing user is already logged in')
-def user_already_logged_in(context):
-    open_sign_up_modal_and_enter_credentials(context, demo_user, demo_password)
-
-
 @when('the user enters his {user} and {password} credentials on the login modal')
-def open_sign_up_modal_and_enter_credentials(context, user, password):
+def open_sign_up_modal_and_enter_credentials(context, user=None, password=None):
+    if user is None and password is None:
+        user = demo_user
+        password = demo_password
     click_element_by_id(context, login_button_id)
     send_keys_by_id(context, login_user_field_id, user)
     send_keys_by_id(context, login_password_field_id, password)
     click_element_by_css_selector(context, login_ok_button_css_selector)
-    # TODO find a way to replace this sleep
-    time.sleep(2)
 
 
 @then('the page displays the "Welcome {username}" and the log out button on the header')
