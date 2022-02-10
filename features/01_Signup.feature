@@ -1,20 +1,21 @@
 Feature: Sign up
 
+  Background:
+    Given the user opens the page demoblaze.com in chrome browser
+
   @smoke @signup
   Scenario Outline: Register a new user
-    Given the user opens the page demoblaze.com in chrome browser
     When the user registers his <user> and <password> credentials on the sign up modal
     Then the page displays an alert with a successful confirmation message
     Examples:
     # In a more robust system or one that I have access to the user registration database, I would create an script or
-    # method to delete stored users. Since I can't do this here, please change the name of the user in this example
-    # in order to test it properly
+    # method to delete stored users. Since I can't do this here, I imported the uuid class and called uuid4() when the
+    # user is not registered
       | user             | password |
       | unregisteredUser | 12345    |
 
   @signup
   Scenario Outline: Register a user already registered
-    Given the user opens the page demoblaze.com in chrome browser
     When the user registers his <user> and <password> credentials on the sign up modal
     Then the page displays an alert with an unsuccessful signup message
     Examples:
