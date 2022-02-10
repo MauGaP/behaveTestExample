@@ -1,4 +1,4 @@
-from CommonConstants import phones_names_list, laptops_names_list, monitors_names_list, default_names_list
+from utils.CommonConstants import phones_names_list, laptops_names_list, monitors_names_list, default_names_list
 
 # region categories
 categories_css_selector = '#cat.list-group-item'

@@ -2,12 +2,12 @@ import time
 
 from behave import when, then
 
-from BasePage import click_element_by_css_selector, click_element_by_id, locate_elements_by_css_selector, \
+from page_objects.HeaderPage import cart_button_id
+from page_objects.BasePage import click_element_by_css_selector, click_element_by_id, locate_elements_by_css_selector, \
     wait_until_alert_is_present
-from CartPage import delete_first_product_button, cart_products_css_selector, purchase_button_css_selector
-from CommonConstants import purchase_data_dictionary
-from HeaderPage import cart_button_id
-from PurchaseSteps import fill_credit_card_form
+from page_objects.CartPage import delete_first_product_button, cart_products_css_selector, purchase_button_css_selector
+from steps.PurchaseSteps import fill_credit_card_form
+from utils.CommonConstants import purchase_data_dictionary
 
 
 @when('the user deletes the product from the cart')

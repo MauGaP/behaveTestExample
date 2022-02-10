@@ -1,9 +1,9 @@
 from behave import given, when, then
 from selenium.webdriver.common.by import By
 
-from BasePage import click_element_by_id, locate_element_by_id, wait_until_element_displayed
-from Driver import launch_browser
-from HeaderPage import logout_button_id, login_button_id, sign_up_button_id
+from page_objects.BasePage import click_element_by_id, locate_element_by_id, wait_until_element_displayed
+from page_objects.HeaderPage import logout_button_id, login_button_id, sign_up_button_id
+from utils.Driver import launch_browser
 
 
 @given('the user opens the page demoblaze.com in {browser} browser')

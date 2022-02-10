@@ -3,12 +3,12 @@ import time
 from behave import given, when, then
 from selenium.webdriver.common.by import By
 
-from BasePage import click_element_by_css_selector, validate_alert_message, wait_until_element_displayed
-from BasePage import locate_element_by_css_selector
-from CommonConstants import product_name, product_price, product_description, product_added_message
-from HomeSteps import click_first_product_displayed
-from ProductPage import get_first_product_information, product_name_css_selector, product_price_css_selector, \
-    product_description_css_selector, add_to_cart_button_css_selector
+from page_objects.BasePage import click_element_by_css_selector, validate_alert_message, wait_until_element_displayed, \
+    locate_element_by_css_selector
+from page_objects.ProductPage import get_first_product_information, product_name_css_selector, \
+    product_price_css_selector, product_description_css_selector, add_to_cart_button_css_selector
+from steps.HomeSteps import click_first_product_displayed
+from utils.CommonConstants import product_name, product_price, product_description, product_added_message
 
 
 @given('the user already added one product to the cart')

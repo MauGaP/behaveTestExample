@@ -2,10 +2,12 @@ import uuid
 
 from behave import when, then
 
-from BasePage import click_element_by_id, send_keys_by_id, click_element_by_css_selector, validate_alert_message
-from CommonConstants import sign_up_successful_message, this_user_already_exists_message
-from HeaderPage import sign_up_button_id
-from SignupModalPage import sign_up_user_field_id, sign_up_password_field_id, sign_up_ok_button_css_selector
+from page_objects.BasePage import click_element_by_id, send_keys_by_id, click_element_by_css_selector, \
+    validate_alert_message
+from page_objects.HeaderPage import sign_up_button_id
+from page_objects.SignupModalPage import sign_up_user_field_id, sign_up_password_field_id, \
+    sign_up_ok_button_css_selector
+from utils.CommonConstants import sign_up_successful_message, this_user_already_exists_message
 
 
 @when('the user registers his {username} and {password} credentials on the sign up modal')

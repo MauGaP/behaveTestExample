@@ -1,17 +1,11 @@
 from behave import then
 
-from BasePage import send_keys_by_id, click_element_by_css_selector, locate_element_by_css_selector
-from CommonConstants import purchase_name, purchase_country, purchase_city, purchase_credit_card_number, \
+from page_objects.BasePage import send_keys_by_id, click_element_by_css_selector, locate_element_by_css_selector
+from page_objects.PurchasePage import name_field_id, country_field_id, city_field_id, credit_card_field_id, \
+    card_month_field_id, card_year_field_id, confirmation_button_css_selector, confirmation_modal_css_selector, \
+    error_modal_css_selector
+from utils.CommonConstants import purchase_name, purchase_country, purchase_city, purchase_credit_card_number, \
     purchase_credit_card_month, purchase_credit_card_year
-from PurchasePage import name_field_id, country_field_id, city_field_id, credit_card_field_id, card_month_field_id, \
-    card_year_field_id, confirmation_button_css_selector, confirmation_modal_css_selector, error_modal_css_selector
-from behave import then
-
-from BasePage import send_keys_by_id, click_element_by_css_selector, locate_element_by_css_selector
-from CommonConstants import purchase_name, purchase_country, purchase_city, purchase_credit_card_number, \
-    purchase_credit_card_month, purchase_credit_card_year
-from PurchasePage import name_field_id, country_field_id, city_field_id, credit_card_field_id, card_month_field_id, \
-    card_year_field_id, confirmation_button_css_selector, confirmation_modal_css_selector, error_modal_css_selector
 
 
 def fill_credit_card_form(self, dictionary):

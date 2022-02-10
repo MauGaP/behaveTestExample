@@ -1,5 +1,5 @@
 # region product information
-from CommonConstants import first_phone_dictionary, first_laptop_dictionary, first_monitor_dictionary, \
+from utils.CommonConstants import first_phone_dictionary, first_laptop_dictionary, first_monitor_dictionary, \
     first_product_dictionary
 
 product_name_css_selector = '#tbodyid .name'

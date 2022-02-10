@@ -1,11 +1,11 @@
 from behave import given, when, then
 from selenium.webdriver.common.by import By
 
-from BasePage import click_element_by_id, send_keys_by_id, click_element_by_css_selector, locate_element_by_id, \
-    validate_alert_message, wait_until_element_displayed
-from CommonConstants import user_does_not_exist_message, demo_user, demo_password
-from HeaderPage import login_button_id, user_welcome_message_id, logout_button_id
-from LoginModalPage import login_user_field_id, login_password_field_id, login_ok_button_css_selector
+from page_objects.BasePage import click_element_by_id, send_keys_by_id, click_element_by_css_selector, \
+    locate_element_by_id, validate_alert_message, wait_until_element_displayed
+from page_objects.HeaderPage import login_button_id, user_welcome_message_id, logout_button_id
+from page_objects.LoginModalPage import login_user_field_id, login_password_field_id, login_ok_button_css_selector
+from utils.CommonConstants import user_does_not_exist_message, demo_user, demo_password
 
 
 @given('an existing user is already logged in')

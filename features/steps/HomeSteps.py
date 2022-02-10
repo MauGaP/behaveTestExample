@@ -3,9 +3,9 @@ import time
 from behave import when, then
 from selenium.webdriver.common.by import By
 
-from BasePage import click_element_by_css_selector, locate_elements_by_class, wait_until_url_changes, \
+from page_objects.BasePage import click_element_by_css_selector, locate_elements_by_class, wait_until_url_changes, \
     wait_until_element_displayed
-from HomePage import category_selection, product_item_class_name, filter_product_names_list, \
+from page_objects.HomePage import category_selection, product_item_class_name, filter_product_names_list, \
     first_product_displayed
 
 
