@@ -2,18 +2,18 @@ import time
 
 from behave import when, then
 
+from BasePage import click_element_by_css_selector, click_element_by_id, locate_elements_by_css_selector, \
+    wait_until_alert_is_present
 from CartPage import delete_first_product_button, cart_products_css_selector, purchase_button_css_selector
 from CommonConstants import purchase_data_dictionary
 from HeaderPage import cart_button_id
 from PurchaseSteps import fill_credit_card_form
-from Utils import click_element_by_css_selector, click_element_by_id, locate_elements_by_css_selector
 
 
 @when('the user deletes the product from the cart')
 def delete_product_from_cart(context):
-    # TODO find a way to replace this sleep
-    time.sleep(2)
     # close alert
+    wait_until_alert_is_present(context)
     alert = context.driver.switch_to.alert
     alert.accept()
     # navigate to cart
@@ -32,7 +32,7 @@ def place_order(context):
 @then('the page displays an empty cart')
 def validate_cart_is_empty(context):
     # TODO find a way to replace this sleep
-    time.sleep(2)
+    time.sleep(1)
     list_of_cart_products = locate_elements_by_css_selector(context, cart_products_css_selector)
 
     # Empty lists are considered a False boolean in Python

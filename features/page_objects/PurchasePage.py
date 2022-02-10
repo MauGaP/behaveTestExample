@@ -5,7 +5,6 @@ city_field_id = 'city'
 credit_card_field_id = 'card'
 card_month_field_id = 'month'
 card_year_field_id = 'year'
-
 confirmation_button_css_selector = '#orderModal .btn-primary'
 # endregion purchase form
 

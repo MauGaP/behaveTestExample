@@ -1,8 +1,9 @@
 from behave import given, when, then
+from selenium.webdriver.common.by import By
 
+from BasePage import click_element_by_id, locate_element_by_id, wait_until_element_displayed
 from Driver import launch_browser
 from HeaderPage import logout_button_id, login_button_id, sign_up_button_id
-from Utils import click_element_by_id, locate_element_by_id
 
 
 @given('the user opens the page demoblaze.com in {browser} browser')
@@ -14,6 +15,7 @@ def navigate_to_home_page(context, browser):
 
 @when('the user tries to logout')
 def user_tries_to_logout(context):
+    wait_until_element_displayed(context, (By.ID, logout_button_id))
     click_element_by_id(context, logout_button_id)
 
 

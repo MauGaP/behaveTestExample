@@ -1,25 +1,25 @@
 import time
 
 from behave import given, when, then
+from selenium.webdriver.common.by import By
 
+from BasePage import click_element_by_css_selector, validate_alert_message, wait_until_element_displayed
+from BasePage import locate_element_by_css_selector
 from CommonConstants import product_name, product_price, product_description, product_added_message
 from HomeSteps import click_first_product_displayed
 from ProductPage import get_first_product_information, product_name_css_selector, product_price_css_selector, \
     product_description_css_selector, add_to_cart_button_css_selector
-from Utils import click_element_by_css_selector, validate_alert_message
-from Utils import locate_element_by_css_selector
 
 
 @given('the user already added one product to the cart')
 def product_already_added_to_cart(context):
     click_first_product_displayed(context)
-    # TODO find a way to replace this sleep
-    time.sleep(1)
     add_product_to_cart(context)
 
 
 @when('adds the product to the cart')
 def add_product_to_cart(context):
+    wait_until_element_displayed(context, (By.CSS_SELECTOR, add_to_cart_button_css_selector))
     click_element_by_css_selector(context, add_to_cart_button_css_selector)
 
 

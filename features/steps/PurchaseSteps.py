@@ -1,12 +1,17 @@
-import time
-
 from behave import then
 
+from BasePage import send_keys_by_id, click_element_by_css_selector, locate_element_by_css_selector
 from CommonConstants import purchase_name, purchase_country, purchase_city, purchase_credit_card_number, \
     purchase_credit_card_month, purchase_credit_card_year
 from PurchasePage import name_field_id, country_field_id, city_field_id, credit_card_field_id, card_month_field_id, \
     card_year_field_id, confirmation_button_css_selector, confirmation_modal_css_selector, error_modal_css_selector
-from Utils import send_keys_by_id, click_element_by_css_selector, locate_element_by_css_selector
+from behave import then
+
+from BasePage import send_keys_by_id, click_element_by_css_selector, locate_element_by_css_selector
+from CommonConstants import purchase_name, purchase_country, purchase_city, purchase_credit_card_number, \
+    purchase_credit_card_month, purchase_credit_card_year
+from PurchasePage import name_field_id, country_field_id, city_field_id, credit_card_field_id, card_month_field_id, \
+    card_year_field_id, confirmation_button_css_selector, confirmation_modal_css_selector, error_modal_css_selector
 
 
 def fill_credit_card_form(self, dictionary):
@@ -19,8 +24,6 @@ def fill_credit_card_form(self, dictionary):
     send_keys_by_id(self, card_year_field_id, dictionary.get(purchase_credit_card_year))
     # click submit button
     click_element_by_css_selector(self, confirmation_button_css_selector)
-    # TODO find a way to replace this sleep
-    time.sleep(2)
 
 
 @then('the page displays a purchase confirmation modal')

@@ -40,7 +40,7 @@ def send_keys_by_id(self, id, text):
 
 def validate_alert_message(self, text_message):
     try:
-        WebDriverWait(self.driver, 3).until(expected_conditions.alert_is_present())
+        wait_until_alert_is_present(self)
         alert = self.driver.switch_to.alert
         if text_message == alert.text:
             alert.accept()
@@ -51,3 +51,15 @@ def validate_alert_message(self, text_message):
 
     except TimeoutException:
         print("no alert")
+
+
+def wait_until_element_displayed(self, locator):
+    WebDriverWait(self.driver, 2).until(expected_conditions.visibility_of_element_located(locator))
+
+
+def wait_until_url_changes(self):
+    WebDriverWait(self.driver, 2).until(expected_conditions.url_changes)
+
+
+def wait_until_alert_is_present(self):
+    WebDriverWait(self.driver, 2).until(expected_conditions.alert_is_present())

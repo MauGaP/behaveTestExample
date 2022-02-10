@@ -19,6 +19,8 @@ def category_selection(category):
             return categories_css_selector
         case _:
             print('not a valid selector')
+
+
 # endregion categories
 
 
