@@ -23,3 +23,6 @@ def user_tries_to_logout(context):
 def login_and_signup_buttons_are_displayed(context):
     assert locate_element_by_id(context, login_button_id).is_displayed()
     assert locate_element_by_id(context, sign_up_button_id).is_displayed()
+
+
+cambio = 'Testing'
