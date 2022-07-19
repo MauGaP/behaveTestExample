@@ -21,3 +21,4 @@ Feature: Sign up
     Examples:
       | user           | password |
       | registeredUser | 12345    |
+      p
