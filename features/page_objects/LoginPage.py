@@ -1,0 +1,6 @@
+HOME_PAGE="http://automationpractice.com/index.php"
+LOGIN_BUTTON=".login"
+CAMPO_EMAIL="laural@gmail.com"
+CAMPO_PASSWORD="123456"
+BUTTON_SUBMIT="SubmitLogin"
+BUTTON_LOGOUT=".logout"
