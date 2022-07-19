@@ -1,22 +1,15 @@
-from selenium import webdriver
 import time
-from selenium.webdriver.common.by import By
-
-## from selenium.webdriver.common.keys import Keys
-
-driver = webdriver.Chrome('C:/Repos/behaveTestExample/drivers/chromedriver.exe')
-## driver.get ('https://google.com')
-## print(driver.title)
-
+from page_objects.Login_page import CAMPO_EMAIL, CAMPO_PAS, CONTRASENA, HOME_PAGE, LOGIN_BOTON, SIGNIN_BOTON, USUARIO
+from page_objects.BasePage import click_elemrnt_by_css_selector, go_to_website, llenar_campo
 ## ir a http://automationpractice.com/index.php
-driver.get('http://automationpractice.com/index.php')
+go_to_website(HOME_PAGE)
 ## hacer click en boton Sing In (inspeccionar, buscar selector, copiar selector)
 time.sleep(1)
-driver.find_element(By.CSS_SELECTOR, '.login').click()
-## completar campo Email address    mikmik@gmail.com   
-driver.find_element(By.CSS_SELECTOR, "#email").send_keys("mikmik@gmail.com")
+click_elemrnt_by_css_selector(LOGIN_BOTON)
+## completar campo Email address    mikmik@gmail.com  
+llenar_campo(CAMPO_EMAIL,USUARIO)
 ## completar campo Password   MIKMIK
-driver.find_element(By.CSS_SELECTOR, "#passwd").send_keys("MIKMIK")
+llenar_campo(CAMPO_PAS,CONTRASENA)
 ##Click en loguear
-driver.find_element(By.CSS_SELECTOR, '#SubmitLogin').click()
+click_elemrnt_by_css_selector(SIGNIN_BOTON)
 ## validar elemento en lapagina sing out
