@@ -21,3 +21,9 @@ Feature: Sign up
     Examples:
       | user           | password |
       | registeredUser | 12345    |
+
+  Scenario: user logs in successfully
+    Given the user is on login page
+    When The user enters valid credentials
+    Then He is redirected to his account
+    And He is successfully logged in
