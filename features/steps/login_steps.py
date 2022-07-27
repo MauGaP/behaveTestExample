@@ -26,4 +26,3 @@ def login_with_valid_credentials(context) :
 def user_is_redirected_to_home(context) :
     wait_until_url_changes(context)
     assert EXPECTEDHOME_URL == context.driver.current_url
-    
