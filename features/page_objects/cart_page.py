@@ -1,0 +1,1 @@
+BACKPACK_PRODUCT_TEXT = '#item_4_title_link > div'
