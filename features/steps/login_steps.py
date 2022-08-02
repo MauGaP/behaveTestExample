@@ -14,6 +14,14 @@ def navigate_to_saucelabs(context) :
     context.driver.maximize_window()
     context.driver.get(LOGIN_URL)
 
+@given('the user is on inventory page')
+def user_already_logged_in(context) :
+    launch_browser(context, 'Chrome')
+    context.driver.maximize_window()
+    context.driver.get(LOGIN_URL)
+    send_keys_by_css_selector(context, USERNAME_FIELD, VALID_USERNAME)
+    send_keys_by_css_selector(context, PASSWORD_FIELD, VALID_PASSWORD)
+    click_element_by_css_selector(context, LOGIN_BTN)
 
 @when('the user logs in with valid credentials')
 def login_with_valid_credentials(context) :
