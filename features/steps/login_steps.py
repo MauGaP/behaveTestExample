@@ -41,8 +41,14 @@ def user_is_redirected_to_home(context) :
     wait_until_url_changes(context)
     assert EXPECTEDHOME_URL == context.driver.current_url
 
+
 @then('the user see the locked out user message')
 def user_is_redirected_to_home(context) :
     error_text = get_element_text(context, MESSAGE_ERROR)
     print(error_text)
     assert error_text == 'Epic sadface: Sorry, this user has been locked out.'
+
+@then('the user is redirected to login page')
+def user_is_redirected_to_home(context) :
+    wait_until_url_changes(context)
+    assert LOGIN_URL == context.driver.current_url

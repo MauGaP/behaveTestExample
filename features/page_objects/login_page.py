@@ -7,4 +7,5 @@ EXPECTEDHOME_URL = 'https://www.saucedemo.com/inventory.html'
 
 USERNAME_FIELD = '#user-name'
 PASSWORD_FIELD = '#password'
+
 MESSAGE_ERROR = '#login_button_container > div > form > div.error-message-container.error > h3'
