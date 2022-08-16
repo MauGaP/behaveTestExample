@@ -1,0 +1,1 @@
+PRODUCT_TITLE='#inventory_item_container > div > div > div.inventory_details_desc_container > div.inventory_details_name.large_size'
