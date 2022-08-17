@@ -10,4 +10,4 @@ Feature: Remove item from cart
     Scenario: Removing products from the cart
         Given the user has an item in the cart
         When the user removes an item from the cart
-        #Then a new item is disappears from the cart
+        Then a new item is disappears from the cart
