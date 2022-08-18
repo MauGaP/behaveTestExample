@@ -4,7 +4,7 @@ from features.page_objects.cart_page import BACKPACK_PRODUCT_TEXT
 from features.page_objects.inventory_page import ADD_BACKPACK_TO_CART_BTN, FILTER_BTN, FIRST_INVENTORY_ELEMENT, CART_BTN, filter_selector
 from page_objects.BasePage import click_element_by_css_selector
 
-@given('el usuario tiene un producto en el carrito')
+@given('the user has an item in the cart')
 def product_in_cart(context) :
     click_element_by_css_selector(context, ADD_BACKPACK_TO_CART_BTN)
     click_element_by_css_selector(context, CART_BTN)

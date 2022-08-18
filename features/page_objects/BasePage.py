@@ -1,3 +1,4 @@
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
@@ -20,3 +21,10 @@ def wait_until_element_displayed(self, locator):
 
 def wait_until_url_changes(self):
     WebDriverWait(self.driver, 2).until(expected_conditions.url_changes)
+
+
+def element_not_displayed(self, css_selector) :
+    try:
+        self.driver.find_element(By.CSS_SELECTOR, css_selector)
+    except NoSuchElementException:
+        return True

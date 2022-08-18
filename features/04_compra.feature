@@ -6,6 +6,6 @@ Feature: compra exitosa
 
     Scenario: Generar una compra exitosa
         Given the user is on inventory page
-        And el usuario tiene un producto en el carrito
+        And the user has an item in the cart
         When el usuario completa la compra
         Then se muestra el mensaje de compra exitosa
